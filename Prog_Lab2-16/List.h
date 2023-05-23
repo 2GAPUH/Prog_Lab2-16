@@ -23,3 +23,4 @@ void DestroyList(list* l);
 
 bool CheckOrederList(list* const l);
 void DeleteListNegativeNumber(list* l);
+int CheckListNegativeNumber(list* const l);
