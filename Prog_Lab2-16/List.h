@@ -20,3 +20,6 @@ int PeekList(list* const l, int index);
 bool SearchInList(list* const l, int tmp);
 bool IsEmptyList(list* const l);
 void DestroyList(list* l);
+
+bool CheckOrederList(list* const l);
+void DeleteListNegativeNumber(list* l);

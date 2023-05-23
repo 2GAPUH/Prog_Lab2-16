@@ -135,3 +135,40 @@ void DestroyList(list* l)
 		l->head = tmpList;
 	}
 }
+
+bool CheckOrederList(list* const l)
+{
+	if (IsEmptyList(l))
+		return 0;
+
+	for (element* i = l->head; i->next != NULL; i = i->next)
+		if (i->data > i->next->data)
+			return 0;
+
+	return 1;
+}
+
+int CheckListNegativeNumber(list* const l)
+{
+	if (IsEmptyList(l))
+		return -1;
+
+	int index = 0;
+	for (element* i = l->head; i != NULL; i = i->next, index++)
+		if (i->data < 0)
+			return index;
+
+	return -1;
+}
+
+void DeleteListNegativeNumber(list* l)
+{
+	if (IsEmptyList(l))
+		return;
+
+	int tmp = 0;
+	while ((tmp = CheckListNegativeNumber(l)) != -1)
+	{
+		PopList(l, tmp);
+	}
+}

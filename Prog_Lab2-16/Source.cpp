@@ -63,7 +63,13 @@ void MainLoop()
 			break;
 
 		case 6:
-			//Task
+			if (CheckOrederList(&array))
+				printf_s("List is order.\n");
+			else
+				printf_s("List is not order\n");
+
+			DeleteListNegativeNumber(&array);
+
 			break;
 
 		case 0:
