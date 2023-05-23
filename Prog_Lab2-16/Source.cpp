@@ -59,7 +59,7 @@ void MainLoop()
 			if (SearchInList(&array, tmpValue))
 				printf_s("%d in list\n", tmpValue);
 			else
-				printf_s("%d mot in list", tmpValue);
+				printf_s("%d not in list\n", tmpValue);
 			break;
 
 		case 6:
@@ -75,10 +75,10 @@ void MainLoop()
 			break;
 		}
 
-		
+		PrintList(&array);
 	}
 
-	
+	DestroyList(&array);
 }
 
 

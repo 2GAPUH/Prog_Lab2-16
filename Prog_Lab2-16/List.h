@@ -18,5 +18,5 @@ void PushList(list* l, int tmp, int index);
 int PopList(list* l, int index);
 int PeekList(list* const l, int index);
 bool SearchInList(list* const l, int tmp);
-void IsEmptyList(list* const l);
+bool IsEmptyList(list* const l);
 void DestroyList(list* l);
